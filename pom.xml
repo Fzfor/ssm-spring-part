@@ -10,6 +10,9 @@
     <modules>
         <module>spring-ioc-xml-01</module>
         <module>spring-ioc-xml-practice-02</module>
+        <module>spring-ioc-ann-practice-01</module>
+        <module>spring-ioc-test-mysql-in-docker</module>
+        <module>spring-ioc-tx-practice-01</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -26,12 +29,6 @@
             <artifactId>spring-context</artifactId>
             <version>6.0.6</version>
         </dependency>
-        <!--junit5测试-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.3.1</version>
-        </dependency>
 
         <!--junit5测试-->
         <dependency>
@@ -45,6 +42,47 @@
             <version>6.0.6</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
+        <!-- 数据库驱动和连接池-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <!-- spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
+        <!-- spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
+        <!-- 声明式事务依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
     </dependencies>
 
 </project>

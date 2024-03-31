@@ -9,23 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-ioc-xml-practice-02</artifactId>
+    <artifactId>spring-ioc-test-mysql-in-docker</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
-
-    <dependencies>
-        <!--spring context依赖-->
-        <!--当你引入SpringContext依赖之后，表示将Spring的基础依赖引入了-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>6.0.6</version>
-        </dependency>
-
-    </dependencies>
 
 </project>

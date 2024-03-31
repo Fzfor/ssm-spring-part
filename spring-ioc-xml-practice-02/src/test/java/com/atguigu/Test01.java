@@ -1,5 +1,7 @@
 package com.atguigu;
 
+import com.atguigu.controller.AnnController;
+import com.atguigu.controller.StudentController;
 import com.atguigu.pojo.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -67,5 +69,23 @@ public class Test01 {
 
         List<Student> query = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Student.class));
         System.out.println(query);
+    }
+
+    @Test
+    public void test04(){
+        //创建ioc
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-ioc-2.xml");
+        StudentController studentController = applicationContext.getBean(StudentController.class);
+        studentController.queryAll();
+        applicationContext.close();
+
+
+    }
+
+    @Test
+    public void test05(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-ioc-3.xml");
+        AnnController annController = applicationContext.getBean(AnnController.class);
+        annController.controller();
     }
 }
